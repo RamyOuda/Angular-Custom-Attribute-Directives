@@ -1,0 +1,10 @@
+<span>Input</span>
+<div class="text-group">
+  <textarea [(ngModel)]="color" appCopyToClipboard></textarea>
+</div>
+
+<div>Paste</div>
+<div class="text-group">
+  <textarea #bottomText [appPasteFromClipboard]="color" disabled></textarea>
+  <button (click)="reset()">Reset</button>
+</div>
